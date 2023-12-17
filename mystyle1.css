@@ -1,0 +1,329 @@
+* {
+	box-sizing:border-box;/*блоки - з рамками*/
+
+	margin: 0;/*скинули всі отступи*/
+	padding: 0;/*скинули всі отступи*/
+	
+}
+
+html,body {
+	height: 100%; /* задаем высоту тела документа */
+
+    	padding-left: 20em;                     /* базовий шрифт має 20 пікселей у висоту  */    
+    	font-family: Georgia, "Times New Roman", Times, serif;				/* базовий шрифт Georgia,Times New Roman */
+    	color: darkblue;				/* колір базового шрифту темно-синій */
+    	background-color: LightSteelBlue ;/**/
+        font-size: 20px;
+	display: flex;/*гумовий екран: */
+	cursor: pointer;
+	line-height: 100%;/*міжрядковий інтервал*/
+}
+
+h1 {font-size: 60px;}
+h2 {font-size: 50px;}
+h3 {font-size: 40px;}
+h4 {font-size: 30px;}
+h5 {font-size: 25px;}
+h6 {font-size: 20px;
+    line-height: 40px;/*міжрядковий інтервал*/}
+p  {font-size: 20px;
+    line-height: 25px;/*міжрядковий інтервал*/}
+/**/
+
+
+
+
+.parent {
+    width: 100%;/*розмір блоку - по-горизонталі*/
+    height: auto;/*розмір блоку - по-вертикалі*/
+    position: absolute;/*положення /місцерозташування*/
+    top: 5;/*відступ зверху*/
+    left: 10;/*відступ зліва*/
+    overflow: auto;
+	min-height: 100%; /* задаємо мінімальну висоту основного блоку */
+
+}
+
+
+.container:after {
+  visibility: hidden;
+  display: flex;/*block;/**/
+  font-size: 0;
+  content: " ";
+  clear: both;
+  /*min-height: 100px;	/**/
+  
+  /*height: 0;*/
+}
+.container { display: inline-block; }/* start commented backslash hack */
+* html .container { height: 1%; }
+.container { display: block; }/* close commented backslash hack */
+
+
+
+.header{
+	background-color: #0B54A2;/**/	
+	background-image: url("font/my_font.jpg");
+        background-attachment:fix;
+        background-position: 100px top; /* фон отступит 100px от левого края, останется сверху*/
+	color:  white;
+	height: 200px;
+	margin-bottom:15 px;
+        padding-left: 20px;
+	/*display: flex;block;/**/
+
+    
+	
+}
+.header h1, h2,h3,h4,h5,h6, p{ padding-left: 5%;
+                               padding-top: 2%;}
+
+/*.image-container {
+  background-image: url("2123.png");
+  width: 600px;
+  height: 400px;
+}*/
+
+
+.content{
+	background-color: broun;/*  white;/**/
+	display: block;
+	color:  darkblue;
+	min-height: 100px;
+	width:80%;
+	float:left;
+	
+	/*text-indent: 15%;/*абзац, м.б. в px або %*/
+        
+	padding: 10px 10px 0px 20px;/*відступи блоку: зверху-зправа-знизу-зліва */
+
+        cursor: pointer;
+	      
+}
+
+table {
+  /*table-layout: fixed;/**/
+  width: 100%;
+  /*border-collapse: collapse;/**/
+  border: 0px;}
+table tr{  vertical-align: top;
+           text-align: left;}
+
+
+table tbody h1, h2,h3,h4,h5,h6 {
+    line-height: 100%;/*міжрядковий інтервал*/}
+
+table tbody{font-size: 20px;
+    line-height: 25px;/*міжрядковий інтервал*/}
+table tbody p {font-size: 20px;
+    line-height: 25px;/*міжрядковий інтервал*/}
+
+content p, h6,li {font-size: 20px;
+    line-height: 40px;/*міжрядковий інтервал*/}
+
+.sidebar2{
+	/*position: fixed;/*фіксуэ меню зліва знизу*/
+  	left: 0;/**/
+	background-color:  #0B54A2;
+	color:  white;
+	min-height: 500px;
+	width:20%;
+	float:left;
+	/*padding-left:10 px;/**/
+        border: 3px solid white;/**/
+
+    /*display: flex;/**/
+  flex-direction: row;/*переносити по рядкам*/
+  justify-content: flex-start;/**/
+  align-items: center;/**/
+  /*bottom: -50px;/**/
+  /* Вся магия тут */
+  /*transform: rotate(270deg);/**/
+  /*transform-origin: 0 0;/**/
+}
+
+ul {
+  list-style-type: none;/**/
+  padding: 0;/**/
+  /*display: flex;/*робить записи по горизонталі*/
+  flex-direction: row;/**/
+  justify-content: flex-start;/**/
+  align-items: center;
+  border:2;	
+  /*border-right: 25em solid darkblue/*розбивка до вказанного символу на рядки*/
+}
+
+.ul-li-n ul li{
+  list-style-type: circle;/**/
+  padding: 0;/**/
+  /*display: flex;/*робить записи по горизонталі*/
+  flex-direction: row;/**/
+  justify-content: flex-start;/**/
+  align-items: center;
+  border:2;	
+  /*border-right: 25em solid darkblue/*розбивка до вказанного символу на рядки*/
+}
+
+.ul-li-n1 ul li{
+  list-style-type: none;/*square;*/
+  padding-left: 10;/*відступ від крапки маркеру*/
+  margin-left :30;/*відступ від края блоку*/
+  line-height: 25px;/*міжрядковий інтервал*/
+}
+
+
+
+.ul-li-n2 ul li{
+  list-style-type: disc;/*square;*/
+  padding-left: 10;/*відступ від крапки маркеру*/
+  margin-left :30;/*відступ від края блоку*/
+  line-height: 25px;/*міжрядковий інтервал*/
+}
+
+.ul-li-n3 ul li{
+  list-style-type: decimal-leading;/**/
+  padding-left: 5;/*відступ від крапки маркеру*/
+  margin-left :30;/*відступ від края блоку*/
+  line-height: 25px;/*міжрядковий інтервал*/
+}
+
+
+/* The navigation menu links */
+.sidebar2 a {
+    padding: 6px 8px 6px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    min-height: 60px;
+    border: 2px solid white; 
+    line-height: 100%;/*міжрядковий інтервал*/
+}/**/
+
+
+/* When you mouse over the navigation links, change their color */
+.sidebar2 a:hover {
+    	color: yellow;
+	font-size: 25px;
+}
+
+.img{
+	/*max-width: 100%:  /**/
+        /*width: 80px;/**/
+  	height:auto; /*залежність розміру малюнку від розміру блоку*/
+  	object-fit: cover;/*при зміні розміру - весь малюнок пропорційно*/
+  	object-position: left top;/*центровка - зліва*/
+	
+  /*max-width:100%;/*максимальнтй розмір блоку*/
+  
+}
+
+
+.width {
+  	width: 100%;/*залежність розміру малюнку від розміру блоку*/
+  	height:auto; /*залежність розміру малюнку від розміру блоку*/
+}
+.max {
+  	max-width: 100%;/*залежність максимального розміру малюнку від розміру блоку*/
+  	height:auto; /*залежність розміру малюнку від розміру блоку*/
+}
+
+
+.left-img {/*обтікання текстом малюнка: зліва - малюнок. праворуч - текст*/
+    float:left; /* центровка по лівому краю */
+    margin: 10px 10px 10px 0; /* Налаштування  відступів навколо малюнка */
+    object-fit: cover;/*при зміні розміру - весь малюнок пропорційно*/
+}
+.right-img  {/*обтікання текстом малюнка: зліва - текст. праворуч - малюнок*/
+    float: right; /* центровка по правому краю  */ 
+    margin: 10px 0 10px 10px; /* Налаштування  відступів навколо малюнка */
+	object-fit: cover;/*при зміні розміру - весь малюнок пропорційно*/
+}
+
+
+.footer{
+	background-color:  #0B54A2;
+	color:  white;
+	height: 100px;
+	margin-top:10 px;
+        padding: 10px 10px 0px 20px;/*відступи блоку: зверху-зправа-знизу-зліва */}
+
+.vl {
+    border-left: 20px solid #0B54A2;
+    /*height: auto;/*500px;/**/
+    min-height: 100%;
+    position: absolute;/* */
+    left: 0;  
+    margin-left: -3px;
+    top: 0;
+}
+
+.menu{
+ list-style-type: none;
+    margin: 0;
+    /*padding: 0;/**/
+    float: right; /* центровка по правому краю  */
+}
+
+.menu a {
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #5757a0;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: lavender;
+  border-bottom: 5px solid #5757a0;
+  flex-direction: row;/*переносити по рядкам*/
+}
+.menu li {
+  display: inline;
+}
+
+
+/*for carusel*/
+.carousel-container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            overflow: hidden; 
+            width: 80%;
+		height: auto;
+            margin: 30px auto;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 30px;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+	.circle img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            
+
+        .text {
+            margin-top: 10px;
+            color: #333;
+		/*padding: 10px 10px 0px 20px;/*відступи блоку: зверху-зправа-знизу-зліва */
+        }
+
+        .arrow {
+            cursor: pointer;
+            font-size: 10px;
+            background-color:#808080; /* Сірий колір для кнопки */
+            /*padding: 10px;/**/
+            border: none;
+            border-radius: 2px;
+            color: #fff;
+        }
+/*end blok for carusel*/
